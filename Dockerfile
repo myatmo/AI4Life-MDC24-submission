@@ -22,5 +22,5 @@ COPY --chown=user:user resources /opt/app/resources
 COPY --chown=user:user inference.py /opt/app/
 COPY --chown=user:user create_model.py /opt/app/
 
-RUN  ["python", "create_model.py"]
-ENTRYPOINT ["python", "inference.py"]
+RUN  ["python", "load_data.py"]
+ENTRYPOINT ["python", "train.py"]
